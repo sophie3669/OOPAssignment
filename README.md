@@ -1,2 +1,3 @@
 # OOPAssignment
-A system that manages a students account in a university
+my OOP Assignment which shows relationship in object and class
+
