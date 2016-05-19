@@ -1,9 +1,9 @@
     var NoteApplication = function (author){
     this.author = author;
-    this.notelist=[];
+    var notelist=[];
     this.create = function(note_content)
             {
-             this.notelist[this.notelist.length] = this.note_content;
+             notelist.push(note_content);
              
              }
      this.listNotes = function(){
