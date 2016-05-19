@@ -1,12 +1,4 @@
-<html>
-<head>
-	<title>this is my oop file</title>
-
-	
-</head>
-<body>
-    <script type="text/javascript">
-    function NoteApplication(author){
+    var NoteApplication = function (author){
     this.author = author;
     this.notelist=[];
     this.create = function(note_content)
@@ -24,8 +16,8 @@
      }
 
    this.get = function(note_id){
-          result = this.notelist[note_id];
-              return (string)result;
+          var result = this.notelist[note_id];
+              return result;
              }
 
   this.search = function(search_text, searchstring){
@@ -49,8 +41,32 @@
     prev.replace(prev,newcont)
    }
 
-}
-  </script>
-</body>
-</html>
+};
 
+describe("NoteApplication", function() {
+    
+     var newAuthor = new NoteApplication("sophie");
+  newAuthor.author;
+  newAuthor.notelist;
+  newAuthor.create;
+  
+  
+  it("should return a name of an author", function() {
+    expect(newAuthor.author).toBe("sophie")
+  });
+  
+   it("should return an empty notelist at instantiation", function(){
+   
+     expect(newAuthor.notelist.length).toBe(0)
+   });
+   
+   it("should return an unempty notelist on the create function call", function(){
+   
+   
+   }); 
+   
+  
+   
+  
+
+});
